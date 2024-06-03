@@ -74,4 +74,10 @@ image1 = traindata[5][1]
 print(image1)
 plt.imshow(image1)
 plt.show()
+
+trainloader = DataLoader(traindata,batch_size=16, shuffle=True)
+testloader = DataLoader(testdata, batch_size=1, shuffle=False)
+
+print(len(trainloader))
+print(len(testloader))
 """
