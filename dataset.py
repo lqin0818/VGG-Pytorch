@@ -56,6 +56,10 @@ class CIFAR100test(Dataset):
             image = self.transform(image)
         return label, image
 
+"""
+test the code
+"""
+"""
 path = './data/cifar-100-python'
 
 traindata = CIFAR100train(path, transform=None)
@@ -66,3 +70,4 @@ image1 = traindata[5][1]
 print(image1)
 plt.imshow(image1)
 plt.show()
+"""
