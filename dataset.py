@@ -56,9 +56,8 @@ class CIFAR100test(Dataset):
             image = self.transform(image)
         return label, image
 
-"""
-test the code
-"""
+
+# test the code #
 """
 path = './data/cifar-100-python'
 
