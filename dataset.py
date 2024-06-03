@@ -13,6 +13,11 @@ import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
 
+"""
+the train/test file in the cifar-100-python is a dict, including 'filenames', 'batchlabel', 'fine_labels', 'coarse_labels', 'data'.
+'data' has 3072 pixels, r is [: 1024] pixels, g is [1024:2048] pixels, b is [2048:] pixels.
+"""
+
 class CIFAR100train(Dataset):
 
     def __init__(self, path, transform = None):
