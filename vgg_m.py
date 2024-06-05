@@ -22,10 +22,10 @@ class VGG(nn.Module):
 
         self.classifier = nn.Sequential(
             nn.Linear(512, 4096),
-            nn.ReLU(),
+            nn.ReLU(inplace=True),
             nn.Dropout(),
             nn.Linear(4096, 4096),
-            nn.ReLU(),
+            nn.ReLU(inplace=True),
             nn.Dropout(),
             nn.Linear(4096, nc)
         )
@@ -44,7 +44,7 @@ def make_layers(cfg, batch_norm = False):
 
     for m in cfg:
         if isinstance(m,int):
-            layers.append(nn.Conv2d(cin,m,3,1))
+            layers.append(nn.Conv2d(cin,m,3,1,1))
 
             if batch_norm:
                 layers.append(nn.BatchNorm2d(m))
